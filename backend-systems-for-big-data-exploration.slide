@@ -1,0 +1,87 @@
+
+Backend Systems for Big Data Exploration
+
+*Bjørn* *Fjukstad*
+Department of Computer Science
+University of Tromsø
+
+_17._ _April_ _2013_ 
+
+
+# * Section
+# ** Subsection
+# *** Subsubsection
+
+# _italics_
+# *bold* 
+# .image /path/to/image height width
+# .iframe /path/to/iframe height width
+# [[URL][text to show]]
+
+* Big Data
+- New challenges for computer scientists 
+- High-volume, high-variety, high-velocity
+- Interdisciplinary science
+
+* Exploring Big Data
+- Gain valuable insights
+- Visualizations to detect patterns
+
+* Why big data exploration is hard
+- Random access patterns
+- It *must* be interactive - sub-second visualizations
+
+* Tableau Desktop and TIBCO Spotfire
+- Two of the leading visual analytics platforms
+- Ad-hoc data exploration 
+- Application on desktop computer or server farm 
+- Drag and drop interface
+
+.image images/tableau.jpg 300 500
+
+* Managing Big Data
+- The Hadoop Framework through Hive and Impala
+- The Tableau Data Engine
+- TIBCO ActiveSpaces
+
+* Hive
+- Data warehousing solution on top of Hadoop
+- Query language HiveQL 
+- Queries compiled into MapReduce jobs
+- Metastore as system catalog
+- Metastore optimized for random access, often deployed as a relational database
+
+* Impala
+- Real-time query engine on top of Hadoop
+- Uses HiveQL, but it is not compiled into map-reduce
+- Order-of-magnitude better performance
+- Only in beta, but [[https://github.com/cloudera/impala][Fork it on GitHub]]
+
+* Tableau Data Engine
+- Column storage
+- Uses metadata to speed up queries
+- Either desktop application or server farm
+
+* TIBCO ActiveSpaces
+- Peer-to-Peer in-memory data grid
+- Leverages data locality like Hadoop
+- Heterogeneous environment with databases and mainframes
+
+* Integration with Tableau and Spotfire
+- Open Database Connectivity (ODBC) API
+- ODBC translates requests into database-dependent queries
+
+* Conclusion
+- Exploring Big Data can provide valuable insights
+- The Hadoop Framework is widely deployed
+- Impala project is very promising
+
+
+
+# HIVE
+# This metastore is contacted whenever tables are
+# referenced in HiveQL, allowing potential speedup. It is stored within
+# either a relational database, or another filesystem that allows for fast
+# random access. 
+
+
