@@ -1,0 +1,83 @@
+NOWAC Data Exploration
+
+
+Tags: Visualization, Genomic Data
+
+*Bjørn* *Fjukstad*
+Department of Computer Science
+University of Tromsø
+
+_16._ _April_ _2013_
+
+
+* The NOWAC study
+
+* The Norwegian Women and Cancer Study
+- Study at Department of Community Medicine by Prof. Eiliv Lund
+- Large research group, international collaboration 
+- Started data collection in 1991
+- Questionnaire information from 170 000 women
+- More than 50 000 blood samples and over 800 biopsies 
+
+* Biology
+
+* Biology 101
+- The human body contains 50 trillion cells
+- Every cell contain the same genetic information
+- This genetic information is stored in nucleic acids, DNA and RNA
+- DNA is responsible for storing the genetic information
+- RNA is responsible for decoding the information stored within DNA
+
+* Genes
+- A gene is a sequence of DNA 
+- The human genome contain 3 billion base pairs of DNA 
+- About 20 000 different genes
+# - Most genes contain information to produce specific proteins
+- 99.5% of DNA is shared between humans
+
+* Gene expression
+- Expression of genes in cells are continuously changing
+- *Problem*: We might be looking for the small difference in gene expression
+
+* DNA Sequencing History 
+- The first whole human genome sequenced for $3 billion in 2001
+- Today it can be sequenced in one day for $1000 
+- However, _"It’s_a_$1000_genome_, _but_a_$100_000_analysis”_
+
+* How to sequence DNA
+- Sample a single molecule of DNA
+- Shear it up randomly into smaller fragments from which templates are created
+- Attach the templates to some solid surface
+- Sequence thousands to billions of base pairs in parallel 
+
+
+* The NOWAC dataset
+
+* Dataset
+- 263 case/control pairs
+- Gene expression values for each gene 
+- First dataset ~62MB rawdata
+
+#- Expression values from over 22 782 different probes 
+#- New dataset: expression values from 39 388 probes
+
+* Progress so far
+- Explored data and created different visualizations using *D3*
+# - [[http://localhost:8000/playground.html][Heat Map]] 
+.image /images/heatmap.png 400 1000
+
+* What to do next
+.image /images/pathway.png 500 1000
+
+* The tools to be used
+- *Requirement*: Should run in a web browser
+- [[http://www.khronos.org/webgl/][WebGL?]]
+
+# * Demos
+# - [[http://localhost:8000/playground.html][Heat Map]]
+# - [[http://workshop.chromeexperiments.com/globe/][WebGL Globe]]
+
+# * Resources
+# - [[http://d3js.org][D3]]
+# - [[http://www.khronos.org/webgl/][WebGL]]
+
