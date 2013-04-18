@@ -46,13 +46,13 @@ Three Components:
 - If cache miss, will reach into storage layer
 - Can use variable length cache stripes (for prefetching)
 
-    handle_request(req)
+    handle_request(req){
       
       if req in cache:
        return calculate(cache.lookup(req))
       else:
        return calculate(storage.lookup(req))
-     
+    }
 
 
 
