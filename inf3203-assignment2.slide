@@ -30,10 +30,10 @@ _19._ _April_ _2013_
 
 
 * Frontend (C^2)
-- Three Components:
-    - Interface
-    - Calculation Engine
-    - Storage layer
+Three Components:
+- Interface
+- Calculation Engine
+- Storage layer
   
 * Interface
 - Used by both load balancer and clients
