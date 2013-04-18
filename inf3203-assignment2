@@ -1,0 +1,62 @@
+# * Section
+# ** Subsection
+# *** Subsubsection
+
+# _italics_
+# *bold* 
+# .image /path/to/image height width
+# .iframe /path/to/iframe height width
+# [[URL][text to show]]
+
+
+Assignment 2: The Cloud Cloud System
+
+*Bjørn* *Fjukstad*, *Einar* *Holsbø*, *Jan-Ove* *Karlberg* 
+Department of Computer Science
+University of Tromsø
+
+_19._ _April_ _2013_ 
+
+* General Architecture
+- Figure
+
+* Clients
+- Javascript - runs in browser
+- Contacts Load balancer
+
+* Load Balancer
+- Gathers statistics from Frontends(C^2)
+- Accepts request, and redirects to FE
+
+
+* Frontend (C^2)
+- Three Components:
+    - Interface
+    - Calculation Engine
+    - Storage layer
+  
+* Interface
+- Used by both load balancer and clients
+- Small and simple
+- Queries C^3 server
+
+* Calculation Engine
+- Uses Cache for storing images/cloudiness values
+- If cache miss, will reach into storage layer
+- Can use variable length cache stripes (for prefetching)
+
+    handle_request(req)
+      
+      if req in cache:
+       return calculate(cache.lookup(req))
+      else:
+       return calculate(storage.lookup(req))
+     
+
+
+
+* Storage Layer
+- Fetches images from vvnas
+ 
+* Some Numbers
+- Performance graphs
