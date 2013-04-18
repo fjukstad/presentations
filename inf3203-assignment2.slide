@@ -21,12 +21,13 @@ _19._ _April_ _2013_
 - Figure
 
 * Clients
-- Javascript - runs in browser
-- Contacts Load balancer
+- Javascript - runs on any platform
+- Queries Load Balancer for images
 
 * Load Balancer
 - Gathers statistics from Frontends(C^2)
-- Accepts request, and redirects to FE
+- Accepts request, and redirects to FE 
+- Redirect is done by replying with _HTTP_ _307_ 
 
 
 * Frontend (C^2)
@@ -38,7 +39,7 @@ Three Components:
 * Interface
 - Used by both load balancer and clients
 - Small and simple
-- Queries C^3 server
+- Queries C3 server
 
 * Calculation Engine
 - Uses Cache for storing images/cloudiness values
