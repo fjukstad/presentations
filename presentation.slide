@@ -1,0 +1,77 @@
+# * Section
+# ** Subsection
+# *** Subsubsection
+
+# _italics_
+# *bold* 
+# .image /path/to/image height width
+# .iframe /path/to/iframe height width
+# [[URL][text to show]]
+
+
+Assignment 2: The Cloud Cloud System
+
+*Bjørn* *Fjukstad*, *Einar* *Holsbø*, *Jan-Ove* *Karlberg* 
+Department of Computer Science
+University of Tromsø
+
+_19._ _April_ _2013_ 
+
+* General Architecture
+.image arch.png 600 600
+
+* Clients
+- Written in javascript - simulates real-world scenario
+- Request images from Load Balancer  
+
+* Load Balancer
+- Gathers statistics from Frontends(C2)
+- Accepts request, and redirects to FE 
+- Redirect is done by replying with _HTTP_ _307_ 
+
+
+* Frontend (C2)
+# *Three*Components*
+- Interface
+- Calculation Engine
+- Storage layer
+
+# .image frontend.png 500 500
+  
+* Interface
+- Used by both load balancer and clients
+- Small and simple
+- Queries C3 server
+
+* Calculation Engine
+- Uses Cache for storing images/cloudiness values
+- If cache miss, will reach into storage layer
+- Can use variable length cache stripes (for prefetching)
+
+    handle_request(req){
+      
+      if req in cache:
+       return calculate(cache.lookup(req))
+      else:
+       return calculate(storage.lookup(req))
+    }
+
+
+* Storage Layer
+- Fetches images from _vvnas00_
+- Simple module using `curl`
+ 
+* Results
+- Average Latency
+.image avglatency.png 500 600
+
+* Results
+- HTTP 503 percentage
+.image 503.png 500 600
+
+
+* Lesson learned
+- The real world can be a hassle - browsers and cross-compatibility
+- The First Rule of Program Optimization still holds
+
+* Demo
