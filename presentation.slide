@@ -36,7 +36,8 @@ _19._ _April_ _2013_
 - Calculation Engine
 - Storage layer
 
-# .image frontend.png 500 500
+* Frontend 
+.image frontend.png 500 500
   
 * Interface
 - Used by both load balancer and clients
